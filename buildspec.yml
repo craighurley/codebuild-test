@@ -4,6 +4,7 @@ phases:
 
   install:
     commands:
+      - codebuild-breakpoint
       - wget https://github.com/grafana/k6/releases/download/v0.35.0/k6-v0.35.0-linux-amd64.rpm ~/k6.rpm
       - rpm -i ~/k6.rpm
       - cp ./statsd.json /opt/aws/amazon-cloudwatch-agent/etc/statsd.json
